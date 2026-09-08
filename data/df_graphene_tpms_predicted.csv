@@ -1,6 +1,6 @@
-Topology,Num_Atoms,Volume_A3,Density_g_cm3,Band_Gap_eV,Formation_Energy_eV_atom,Energy_Hull_eV_atom,Bulk_Modulus_GPa,Shear_Modulus_GPa,Young_Modulus_GPa,Pugh_Ratio,Poisson_Ratio,E_ads_DFT_eV,TPMS_Composite_Score,Rank
-SHEET_DIAMOND,332,2762.7,2.397,0.0,0.12,0.05,185.4,92.1,236.8,2.01,0.287,-2.52,0.9999466737771457,1
-SHEET_GYROID,244,2527.5,1.925,0.0,0.14,0.05,172.6,85.3,219.0,2.02,0.288,-2.48,0.8573352615519123,2
-SHEET_NEOVIUS,188,1829.1,2.05,0.0,0.16,0.06,134.2,67.5,172.0,1.99,0.285,-2.22,0.4648151492458627,3
-SHEET_IWP,228,2013.0,2.259,0.01,0.15,0.06,138.0,69.8,178.4,1.98,0.284,-2.28,0.44900861882381937,4
-SHEET_PRIMITIVE,200,3092.5,1.29,0.02,0.18,0.07,142.0,71.2,182.5,1.99,0.285,-2.35,0.25111830453082035,5
+Topology,cif_file,Num_Atoms,Density_g_cm3,Band_Gap_eV,Formation_Energy_eV_atom,Bulk_Modulus_GPa,Shear_Modulus_GPa,Young_Modulus_GPa,E_ads_DFT_eV,TPMS_Composite_Score,Rank
+Diamond (D),graphene_sheet_diamond.cif,332,2.4,0.0,0.124,152.4,78.2,198.5,-2.48,0.9393783695822653,1
+Gyroid (G),graphene_sheet_gyroid.cif,244,1.93,0.0,0.098,126.8,64.5,163.7,-2.55,0.8256527030526872,2
+IWP (I-WP),graphene_sheet_iwp.cif,228,2.26,0.02,0.145,142.1,71.0,181.2,-2.35,0.8072377411534717,3
+Neovius (N),graphene_sheet_neovius.cif,188,2.05,0.01,0.162,131.5,66.8,170.1,-2.28,0.7086941624430343,4
+Primitive (P),graphene_sheet_primitive.cif,200,1.29,0.0,0.185,84.6,42.1,108.2,-2.12,0.33981514924586265,5

@@ -57,15 +57,12 @@ The framework screens 5 fundamental **Triply Periodic Minimal Surface (TPMS)** s
 
 ```text
 ├── data/
-│   ├── Anode_Dataset_clean_enriched.csv    # Enriched anode dataset with target properties
-│   ├── Anode_Dataset_clean_enriched.pkl    # Serialized enriched dataset
-│   ├── df_anode_clean_cgcnn_predicted.csv  # Model predictions on clean dataset
-│   ├── df_graphene_tpms_predicted.csv      # Screening results for 3D TPMS structures
-│   ├── cgcnn_anode_evaluation_metrics.csv  # Train / Validation / Test benchmark metrics
-│   ├── cgcnn_anode_model.pt                # Pre-trained multi-target CGCNN weights
-│   ├── jarvis_properties_cache.json        # JARVIS DFT property cache
-│   ├── mp_properties_cache.json            # Materials Project DFT property cache
-│   └── 2dmatpedia_lookup.json              # 2DMatPedia structural reference cache
+│   ├── anode_dataset_final.csv             # Curated anode dataset (115 materials across 7 properties)
+│   ├── cgcnn_anode_evaluation_metrics.csv  # Train / Validation / Test performance metrics (R², MAE, RMSE)
+│   ├── cgcnn_anode_model.pt                # Pre-trained multi-target CGCNN PyTorch checkpoint
+│   ├── cgcnn_calibration_params.pkl        # Multi-property residual calibration parameters
+│   ├── df_anode_clean_cgcnn_predicted.csv  # Full model predictions & screening composite scores
+│   └── df_graphene_tpms_predicted.csv      # Predicted properties & rankings for 3D TPMS scaffolds
 ├── graphene_tpms/                          # CIF structures of 3D graphene TPMS architectures
 │   ├── graphene_sheet_diamond.cif
 │   ├── graphene_sheet_gyroid.cif
@@ -73,22 +70,28 @@ The framework screens 5 fundamental **Triply Periodic Minimal Surface (TPMS)** s
 │   ├── graphene_sheet_neovius.cif
 │   └── graphene_sheet_primitive.cif
 ├── models/
-│   └── cgcnn_model.py                      # CGCNN architecture & feature featurizer
-├── paper_figures/                          # High-resolution figures & publication tables
+│   ├── cgcnn_model.py                      # Multi-task CGCNN architecture & graph featurizer
+│   └── run_real_training.py                # Standalone training script for CGCNN model
+├── notebooks/
+│   └── Thesis.ipynb                        # Master end-to-end research notebook (EDA, Training, Screening, Tables)
+├── paper_figures/                          # 300 DPI high-resolution figures (PNG & PDF)
 │   ├── fig1_eda_property_distributions.png
 │   ├── fig2_eda_correlation_matrix.png
 │   ├── fig3_eda_material_classification.png
 │   ├── fig4_training_curves.png
 │   ├── fig5_cgcnn_parity_plots.png
+│   ├── fig6_dataset_first5_actual_vs_predicted.png
 │   ├── fig7_user_dataset_top5_actual_vs_predicted.png
 │   ├── fig8_user_dataset_radar_comparison.png
 │   ├── fig9_tpms_property_rankings.png
-│   ├── fig10_tpms_radar_comparison.png
-│   └── table_*.png / table_*.pdf
-├── EDA_dan_Training_CGCNN.ipynb            # Full EDA, Graph Featurization, Training & Eval
-├── Olah data.ipynb                         # Raw data extraction and preprocessing pipeline
+│   └── fig10_tpms_radar_comparison.png
+├── paper_tables/                           # Academic 3-line tables (Excel & Word)
+│   ├── Publication_Tables_CGCNN_Anode.xlsx # Multi-sheet consolidated Excel workbook
+│   ├── Publication_Tables_CGCNN_Anode.docx # Publication-ready Microsoft Word table document
+│   └── Table_*.xlsx                        # Individual topic tables (Tables 0-5)
 ├── requirements.txt                        # Python package dependencies
 ├── .gitignore                              # Git exclusion rules
+├── LICENSE                                 # MIT License
 └── README.md                               # Project documentation
 ```
 
